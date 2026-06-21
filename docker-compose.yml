@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: crypto_mysql_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: crypto_bi_db
+      MYSQL_ROOT_PASSWORD: crypto_pass_2026
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  app:
+    build: .
+    container_name: crypto_streamlit_app
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8501:8501"
+    environment:
+      - DB_TYPE=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=crypto_bi_db
+      - DB_USER=root
+      - DB_PASSWORD=crypto_pass_2026
+    volumes:
+      - .:/app
+
+volumes:
+  mysql_data:
+    driver: local

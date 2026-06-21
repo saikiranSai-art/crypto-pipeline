@@ -1,0 +1,23 @@
+
+=========================================
+🚨 PIPELINE FAILURE ALERT [MADSC301 BI]
+Timestamp: 2026-06-13 17:42:29
+Stage: LOADING
+Error Details: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+=========================================
+
+=========================================
+🚨 PIPELINE FAILURE ALERT [MADSC301 BI]
+Timestamp: 2026-06-13 19:38:27
+Stage: LOADING
+Error Details: time data '2026-06-13 19:38:25' does not match format '%Y-%m-%d %H:%M:%S.%f'
+=========================================
+
+=========================================
+🚨 PIPELINE FAILURE ALERT [MADSC301 BI]
+Timestamp: 2026-06-19 20:16:00
+Stage: LOADING
+Error Details: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+=========================================
